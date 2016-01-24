@@ -95,6 +95,7 @@ Template.work.helpers({
 
 Template.work.events({
 	'click .item.with-zoom': function (event, template) {
+		return;
 		if (!isTouchDevice()) {
 			$(event.currentTarget)
 			.toggleClass('zoom')
