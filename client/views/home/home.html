@@ -1,0 +1,20 @@
+<template name="home">
+  <div class="home-background hidden-xs hidden-sm" style="background-image: url({{ dict 'images.background.url' }})">
+
+  </div>
+  <div class="home-background visible-sm background-cover" style="background-image: url({{ dict 'images.backgroundMedium.url' }})">
+
+  </div>
+  <div class="home-background visible-xs background-cover" style="background-image: url({{ dict 'images.backgroundSmall.url' }})">
+
+  </div>
+  <style>
+    @media (min-width: 768px) {
+      ul.nav.navbar-nav.navbar-right {
+        top: 50px;
+        position: absolute;
+        right: 40px;
+      }
+    }
+  </style>
+</template>
