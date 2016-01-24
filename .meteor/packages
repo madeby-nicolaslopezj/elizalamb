@@ -27,6 +27,7 @@ orionjs:relationships
 vsivsi:orion-file-collection
 
 nicolaslopezj:roles
+nicolaslopezj:orion-exporter
 
 fourseven:scss
 reywood:bootstrap3-sass
