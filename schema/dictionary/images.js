@@ -2,6 +2,10 @@ orion.dictionary.addDefinition('logo', 'images', orion.attribute('image', {
   label: 'Logo',
 }));
 
+orion.dictionary.addDefinition('logoNotHome', 'images', orion.attribute('image', {
+  label: 'Logo not in home',
+}));
+
 orion.dictionary.addDefinition('background', 'images', orion.attribute('image', {
   label: 'Home background',
 }));

@@ -15,6 +15,10 @@
 
 @media (min-width: 768px) {
   nav.navbar {
-    margin-bottom: 40px;
+    //margin-bottom: 40px;
+  }
+
+  ul.nav.navbar-nav.navbar-right {
+    margin-top: 15px;
   }
 }

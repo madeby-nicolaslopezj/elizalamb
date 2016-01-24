@@ -25,8 +25,18 @@ Categories.attachSchema(new SimpleSchema({
   },
   url: {
     type: String,
-    label: 'path',
+    label: 'Path',
     unique: true,
   },
+  statement: {
+    type: String,
+    label: 'Statement',
+    autoform: {
+      type: 'textarea',
+    },
+  },
+  statementImage: orion.attribute('image', {
+    label: 'Statement thumbnail',
+  }),
   createdAt: orion.attribute('createdAt'),
 }));

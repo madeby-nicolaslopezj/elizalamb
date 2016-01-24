@@ -28,7 +28,7 @@ Template.work.onCreated(function() {
 	  	});
     } else {
 			SEO.set({
-	  		title: 'No encontrado - ' + orion.dictionary.get('seo.title'),
+	  		title: 'Not found - ' + orion.dictionary.get('seo.title'),
 	  		link: {
 	  			icon: Meteor.absoluteUrl().slice(0, -1) + orion.dictionary.get('seo.favicon.url'),
 	  		},
@@ -36,7 +36,7 @@ Template.work.onCreated(function() {
 	  			'description': orion.dictionary.get('seo.description')
 	  		},
 	  		og: {
-	  			'title': 'No encontrado - ' + orion.dictionary.get('seo.title'),
+	  			'title': 'Not found - ' + orion.dictionary.get('seo.title'),
 	  			'description': orion.dictionary.get('seo.description'),
 	  			'image': Meteor.absoluteUrl().slice(0, -1) + orion.dictionary.get('seo.image.url')
 	  		}
@@ -83,11 +83,18 @@ Template.work.helpers({
     var category = Categories.findOne({ url: Router.current().params.url });
     var image = category && Images.findOne({ categoryId: category._id }, { sort: { index: 1 } });
   	return image && image._id == this._id;
-  }
+  },
+	lastIndex: function() {
+		var category = Categories.findOne({ url: Router.current().params.url });
+		if (!category) {
+			return 0;
+		}
+		return Images.find({ categoryId: category._id }).count();
+	}
 });
 
 Template.work.events({
-	'click .item': function (event, template) {
+	'click .item.with-zoom': function (event, template) {
 		if (!isTouchDevice()) {
 			$(event.currentTarget)
 			.toggleClass('zoom')

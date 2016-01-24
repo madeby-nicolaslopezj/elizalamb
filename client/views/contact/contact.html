@@ -5,9 +5,9 @@
       <div class="col-sm-6">
         {{# unless contactSent }}
           {{# autoForm schema='ContactSchema' id="contactForm" type="method" meteormethod="sendContact" }}
-            {{> afQuickField name="name" placeholder="Nombre" class="span12" label=false }}
+            {{> afQuickField name="name" placeholder="Name" class="span12" label=false }}
             {{> afQuickField name="email"  placeholder="Email" class="span12" label=false }}
-            {{> afQuickField name="message"  placeholder="Mensaje" rows=10 class="span12" label=false }}
+            {{> afQuickField name="message"  placeholder="Message" rows=10 class="span12" label=false }}
             <button type="submit" class="btn btn-primary">Send</button>
           {{/ autoForm }}
         {{ else }}

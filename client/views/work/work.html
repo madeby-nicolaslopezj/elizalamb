@@ -4,17 +4,31 @@
       <div id="carousel" class="carousel slide hidden-xs">
         <div class="carousel-inner">
           {{# each images }}
-            <div class="item {{# if isFirst }}active{{/ if }}">
+            <div class="item with-zoom {{# if isFirst }}active{{/ if }}">
               <div class="imagensita" style="background-image: url({{ image.url }})"></div>
               <div class="descripcionsita">{{ description }}</div>
             </div>
           {{/ each }}
+          <div class="item">
+            <div class="imagensita align-left">
+              <br>
+              <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" style="text-align: left">
+                  {{{ nl2br category.statement }}}
+                </div>
+              </div>
+              <br>
+            </div>
+            <div class="descripcionsita"></div>
+          </div>
         </div>
         <ul class="indicators">
           {{# each images }}
             <li data-target="#carousel" data-slide-to="{{ @index }}" class="{{# if isFirst }}active{{/ if }}" style="background-image: url({{ thumb.url }})">
             </li>
           {{/ each }}
+          <li data-target="#carousel" data-slide-to="{{ lastIndex }}" style="background-image: url({{ category.statementImage.url }})">
+          </li>
         </ul>
       </div>
       <div class="container-fluid visible-xs">
@@ -26,10 +40,14 @@
             </p>
           </div>
         {{/ each }}
+        <br><br>
+        <p>
+          {{{ nl2br category.statement }}}
+        </p>
       </div>
     {{ else }}
       <p class="text-center">
-        No se encontró lo que buscabas
+        We didn't find what you were looking for
       </p>
     {{/ if }}
   {{ else }}
