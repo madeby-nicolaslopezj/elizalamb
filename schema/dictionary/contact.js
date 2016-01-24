@@ -1,4 +1,4 @@
 orion.dictionary.addDefinition('emailSent', 'contact', {
   type: String,
-  label: 'Texto que sale cuando envian un formulario de contacto',
+  label: 'Text after a contact is sent',
 });

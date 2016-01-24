@@ -1,7 +1,7 @@
-orion.dictionary.addDefinition('image', 'about', orion.attribute('image', {
-  label: 'Imagen de cosita about'
+orion.dictionary.addDefinition('text', 'about', orion.attribute('summernote', {
+  label: 'About Text',
 }));
 
-orion.dictionary.addDefinition('text', 'about', orion.attribute('summernote', {
-  label: 'Que es ser la cosita about?'
+orion.dictionary.addDefinition('cv', 'about', orion.attribute('file', {
+  label: 'CV File',
 }));

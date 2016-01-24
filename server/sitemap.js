@@ -4,7 +4,7 @@ sitemaps.add('/sitemap.xml', function() {
 
   var items = [];
 
-  _.each(basicRoutes, function(routeName){
+  _.each(basicRoutes, function(routeName) {
     items.push({
       page: Router.path(routeName),
       lastmod: new Date(),

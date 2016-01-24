@@ -1,6 +1,6 @@
 <template name="contact">
   <div class="container contact">
-    <h3>Contacto</h3>
+    <h3>Contact</h3>
     <div class="row">
       <div class="col-sm-6">
         {{# unless contactSent }}
@@ -8,7 +8,7 @@
             {{> afQuickField name="name" placeholder="Nombre" class="span12" label=false }}
             {{> afQuickField name="email"  placeholder="Email" class="span12" label=false }}
             {{> afQuickField name="message"  placeholder="Mensaje" rows=10 class="span12" label=false }}
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Send</button>
           {{/ autoForm }}
         {{ else }}
           <div>
@@ -26,12 +26,6 @@
           <a target="_BLANK" href="http://instagram.com/{{ dict 'social.instagram' }}">
             <i class="fa fa-fw fa-instagram"></i>
             {{ dict 'social.instagram' }}
-          </a>
-        </p>
-        <p>
-          <a target="_BLANK" href="http://facebook.com/{{ dict 'social.facebook' }}">
-            <i class="fa fa-fw fa-facebook"></i>
-            {{ dict 'social.facebook' }}
           </a>
         </p>
         <p>

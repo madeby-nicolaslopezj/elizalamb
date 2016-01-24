@@ -19,9 +19,9 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 orionjs:core
 orionjs:bootstrap
 orionjs:image-attribute
+orionjs:file-attribute
 orionjs:summernote
 orionjs:filesystem
-orionjs:lang-es
 orionjs:relationships
 
 vsivsi:orion-file-collection

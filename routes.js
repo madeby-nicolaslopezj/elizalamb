@@ -1,7 +1,3 @@
-Router.configure({
-  trackPageView: true,
-});
-
 Router.route('/', {
   name: 'home',
   layoutTemplate: 'layout',
