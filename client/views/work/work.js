@@ -46,7 +46,14 @@ Template.work.onCreated(function() {
 });
 
 Template.work.onRendered(function() {
-  var self = this;
+	var self = this;
+	$(document).keydown(function(e) {
+		if (e.keyCode == 39) {
+			self.$('.carousel').carousel('next');
+		} else if(e.keyCode == 37) {
+			self.$('.carousel').carousel('prev');
+		}
+	});
   self.autorun(function() {
     var ready = Template.instance().subscriptionsReady();
     if (!ready) return;

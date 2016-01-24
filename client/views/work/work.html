@@ -9,6 +9,7 @@
               <div class="descripcionsita">{{ description }}</div>
             </div>
           {{/ each }}
+          {{# if category.statement }}
           <div class="item">
             <div class="imagensita align-left">
               <br>
@@ -21,14 +22,17 @@
             </div>
             <div class="descripcionsita"></div>
           </div>
+          {{/ if }}
         </div>
         <ul class="indicators">
           {{# each images }}
             <li data-target="#carousel" data-slide-to="{{ @index }}" class="{{# if isFirst }}active{{/ if }}" style="background-image: url({{ thumb.url }})">
             </li>
           {{/ each }}
+          {{# if category.statement }}
           <li data-target="#carousel" data-slide-to="{{ lastIndex }}" style="background-image: url({{ category.statementImage.url }})">
           </li>
+          {{/ if }}
         </ul>
       </div>
       <div class="container-fluid visible-xs">
@@ -53,7 +57,7 @@
   {{ else }}
     <br>
     <p class="text-center">
-      Cargando...
+      Loading...
     </p>
   {{/ if }}
 </template>
