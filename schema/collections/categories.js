@@ -10,6 +10,7 @@ Categories = new orion.collection('categories', {
       { data: 'index', title: 'Index' },
       { data: 'name', title: 'Name' },
       { data: 'url', title: 'Path' },
+      { data: 'isHidden', title: 'Hidden', render: (val) => val ? 'Yes' : 'No' },
     ],
   },
 });
@@ -31,12 +32,18 @@ Categories.attachSchema(new SimpleSchema({
   statement: {
     type: String,
     label: 'Statement',
+    optional: true,
     autoform: {
       type: 'textarea',
     },
   },
   statementImage: orion.attribute('image', {
     label: 'Statement thumbnail',
+    optional: true,
   }),
+  isHidden: {
+    type: Boolean,
+    label: 'Hidden',
+  },
   createdAt: orion.attribute('createdAt'),
 }));
