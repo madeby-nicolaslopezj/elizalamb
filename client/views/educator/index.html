@@ -1,0 +1,25 @@
+<template name="educatorIndex">
+  <div class="home-background hidden-xs hidden-sm" style="background-image: url({{ dict 'educator.background.url' }})">
+
+  </div>
+  <div class="home-background visible-sm" style="background-image: url({{ dict 'educator.backgroundMedium.url' }})">
+
+  </div>
+  <div class="home-background visible-xs background-cover" style="background-image: url({{ dict 'educator.backgroundSmall.url' }})">
+
+  </div>
+  <style>
+    @media (min-width: 768px) {
+      ul.nav.navbar-nav.navbar-right {
+        margin-top: 50px;
+      }
+    }
+    button.navbar-toggle {
+      margin-top: 58px;
+    }
+
+    .navbar-collapse.collapse.in, .navbar-collapse.collapsing {
+      margin-top: 20px;
+    }
+  </style>
+</template>

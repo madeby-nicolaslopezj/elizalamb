@@ -1,0 +1,50 @@
+<template name="educatorLayout">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="navbar-col">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ pathFor 'educator.index' }}">
+              {{# if isActiveRoute regex='educator.index' }}
+                <img src="{{ dict 'educator.logo.url' }}" style="height: 120px" />
+              {{ else }}
+                <img src="{{ dict 'educator.logoNotHome.url' }}" style="height: 54px" />
+              {{/ if }}
+            </a>
+          </div>
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav navbar-right">
+               <li class="dropdown {{ isActiveRoute regex='educator.about' }}">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   {{# each abouts }}
+                    {{# if pdf }}
+                      <li><a href="{{ pdf.url }}" target="_blank">{{ name }}</a></li>
+                    {{ else }}
+                      <li class="{{ isActivePath path=getAboutPath }}"><a href="{{ pathFor 'educator.about.item' }}">{{ name }}</a></li>
+                    {{/ if }}
+                   {{/ each }}
+                 </ul>
+               </li>
+               <li class="dropdown {{ isActiveRoute regex='work' }}">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Work <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                   <li><a href="{{ pathFor 'home' }}">Personal Work</a></li>
+                   <li class="{{ isActiveRoute regex='educator.work' }}"><a href="{{ pathFor 'educator.work' }}">Student Work</a></li>
+                 </ul>
+               </li>
+               <li class="{{ isActiveRoute regex='educator.contact' }}"><a href="{{ pathFor 'educator.contact' }}">Contact</a></li>
+             </ul>
+           </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  {{> yield }}
+</template>

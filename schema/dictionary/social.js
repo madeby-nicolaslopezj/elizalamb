@@ -5,5 +5,10 @@ orion.dictionary.addDefinition('email', 'social', {
 
 orion.dictionary.addDefinition('instagram', 'social', {
   type: String,
-  label: 'Instagram',
+  label: 'Instagram (no educator)',
+});
+
+orion.dictionary.addDefinition('phone', 'social', {
+  type: String,
+  label: 'Phone (only educator)',
 });

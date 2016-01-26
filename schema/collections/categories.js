@@ -9,7 +9,7 @@ Categories = new orion.collection('categories', {
     columns: [
       { data: 'index', title: 'Index' },
       { data: 'name', title: 'Name' },
-      { data: 'path', title: 'Path' },
+      { data: 'url', title: 'Path' },
     ],
   },
 });
