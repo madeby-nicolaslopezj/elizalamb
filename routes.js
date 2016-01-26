@@ -32,7 +32,7 @@ Router.route('/educator/contact', {
   layoutTemplate: 'educatorLayout',
 });
 
-Router.route('/educator/about/:url', {
+Router.route('/educator/:url', {
   name: 'educator.about.item',
   layoutTemplate: 'educatorLayout',
 });
