@@ -24,10 +24,9 @@ orionjs:summernote
 orionjs:filesystem
 orionjs:relationships
 
-vsivsi:orion-file-collection
+orionjs:s3
 
 nicolaslopezj:roles
-nicolaslopezj:orion-exporter
 
 fourseven:scss
 reywood:bootstrap3-sass
