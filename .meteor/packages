@@ -42,3 +42,5 @@ email
 gadicohen:sitemaps
 gwendall:simple-schema-i18n
 reywood:iron-router-ga
+
+iron:middleware-stack@1.1.0
